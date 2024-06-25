@@ -1,0 +1,332 @@
+<html>
+    <head>
+        <script src="https://code.responsivevoice.org/responsivevoice.js?key=ETYgQVpo"></script>
+
+        <style>
+            tr{
+                height:10px;
+                width:20px;
+                border: 3px;
+                }
+                .a1{
+                    font-size: 80px;
+                    color: purple;
+                    margin-left: 500px;
+                    
+                }
+                .a{
+                    background-color: green;
+                    color:white;
+                    font-size: 80px;
+                    font-weight:bold;
+                    width:500px;
+                    height:200px;
+                    margin-left: 30%;
+                    margin-top: 15%;
+                    border-radius: 20px;
+                }
+                .b{
+                    border-collapse: collapse;
+                    font-family: 'Courier New', Courier, monospace;
+                    background-color: brown;
+                }
+                td{ font-size: 100px;
+                    text-align: center;
+                    height: 100px;
+                    width:100px;
+                
+
+                }
+               .z{
+                width:80px;
+                height:80px;
+                border-radius: 15px;
+                font-size: 70px;
+                color:purple;
+               }
+               .m{
+                font-size: 80px;
+                color:brown;
+
+               }
+          </style>
+          <script>  
+        
+          function restart()
+          {
+              document.getElementById("b1").value="";
+              document.getElementById("b2").value="";
+              document.getElementById("b3").value="";
+              document.getElementById("b4").value="";
+              document.getElementById("b5").value="";
+              document.getElementById("b6").value="";
+              document.getElementById("b7").value="";
+              document.getElementById("b8").value="";
+              document.getElementById("b9").value="";
+              t=1;
+          }                      
+        
+            var c1=0,c2=0;
+            function winner()
+            {
+
+                var a=document.getElementById("b1").value;
+                var b=document.getElementById("b2").value;
+                var c=document.getElementById("b3").value;
+                var d=document.getElementById("b4").value;
+                var e=document.getElementById("b5").value;
+                var f=document.getElementById("b6").value;
+                var g=document.getElementById("b7").value;
+                var h=document.getElementById("b8").value;
+                var i=document.getElementById("b9").value;
+                if((a=="x"&& b=="x"&&c=="x")||(d=="x"&&e=="x"&&f=="x")||(g=="x"&&h=="x"&&i=="x")||(a=="x"&&d=="x"&&g=="x")
+                ||(c=="x"&&f=="x"&&i=="x")||(a=="x"&& e=="x"&&i=="x")||(b=="x"&&e=="x"&&h=="x")||(c=="x"&&e=="x"&&g=="x"))
+                {    
+                     c1=c1+1;
+                   
+                    document.getElementById("x1").innerHTML=c1;
+                   
+               
+                    restart();
+                }
+                if((a=="0"&& b=="0"&&c=="0")||(d=="0"&&e=="0"&&f=="0")||(g=="0"&&h=="0"&&i=="0")||(a=="0"&&d=="0"&&g=="0")
+                ||(c=="0"&&f=="0"&&i=="0")||(a=="0"&& e=="0"&&i=="0")||(b=="0"&&e=="0"&&h=="0")||(c=="0"&&e=="0"&&g=="0"))
+                
+                {         c2=c2+1;
+
+                  
+                    document.getElementById("x2").innerHTML=c2;
+                    
+                   
+                 
+                    restart();
+                }
+                if(c1==2)
+                {
+                responsiveVoice.speak("player one is winner ");
+                document.getElementById("v1").innerHTML ="player one is winner";
+                restart();
+               
+                }
+                if(c2==2){
+                    
+               
+                responsiveVoice.speak("player two is winner");
+                document.getElementById("v1").innerHTML ="player two is winner";
+                restart();
+           
+                  }
+        }
+        var t=1;
+            function show1()
+            {
+                if( document.getElementById("b1").value.length==0)
+                {
+                if(t%2==1)
+                {  responsiveVoice.speak("player two turn ");
+                    document.getElementById("b1").value="x";
+                }
+                else
+                {   responsiveVoice.speak("player one turn ");
+                    document.getElementById("b1").value="0";
+
+                }
+                t=t+1;
+                winner();
+                }
+            }
+            function show2()
+            {
+                if( document.getElementById("b2").value.length==0)
+                {
+                if(t%2==1)
+                { responsiveVoice.speak("player two turn ");
+                    document.getElementById("b2").value="x";
+                }
+                else
+                {  responsiveVoice.speak("player one turn ");
+                    document.getElementById("b2").value="0";
+
+                }
+                t=t+1;
+                winner();
+            }}
+            function show3()
+            {
+                if( document.getElementById("b3").value.length==0)
+                {
+                if(t%2==1)
+                { responsiveVoice.speak("player two turn ");
+                    document.getElementById("b3").value="x";
+                }
+                else
+                {  responsiveVoice.speak("player one turn ");
+                    document.getElementById("b3").value="0";
+
+                }
+                t=t+1;
+                winner();
+            }
+        }
+            function show4()
+            {
+                if( document.getElementById("b4").value.length==0)
+                {
+                if(t%2==1)
+                {  responsiveVoice.speak("player two turn ");
+                    document.getElementById("b4").value="x";
+                }
+                else
+                {  responsiveVoice.speak("player one turn ");
+                    document.getElementById("b4").value="0";
+
+                }
+                t=t+1;
+                winner();
+
+            }
+        }
+            function show5()
+            {
+                if( document.getElementById("b5").value.length==0)
+                {
+                if(t%2==1)
+                { responsiveVoice.speak("player two turn ");
+                    document.getElementById("b5").value="x";
+                }
+                else
+                {  responsiveVoice.speak("player one turn ");
+                    document.getElementById("b5").value="0";
+
+                }
+                t=t+1;
+                
+            }
+            winner();
+            }
+            function show6()
+            {
+                if( document.getElementById("b6").value.length==0)
+                {
+                if(t%2==1)
+                {  responsiveVoice.speak("player two turn ");
+                    document.getElementById("b6").value="x";
+                }
+                else
+                {  responsiveVoice.speak("player one turn ");
+                    document.getElementById("b6").value="0";
+
+                }
+                t=t+1;
+              
+            }   winner();
+            }
+            function show7()
+            {
+                if( document.getElementById("b7").value.length==0)
+                {
+                if(t%2==1)
+                {  responsiveVoice.speak("player two turn ");
+                    document.getElementById("b7").value="x";
+                }
+                else
+                {  responsiveVoice.speak("player one turn ");
+                    document.getElementById("b7").value="0";
+
+                }
+                t=t+1;
+                winner();
+            }
+            }
+            function show8()
+            {
+                if( document.getElementById("b8").value.length==0)
+                {
+                if(t%2==1)
+                {  responsiveVoice.speak("player two turn ");
+                    document.getElementById("b8").value="x";
+                }
+                else
+                {  responsiveVoice.speak("player one turn ");
+                    document.getElementById("b8").value="0";
+
+                }
+                t=t+1;
+                winner();
+            }
+            }
+            function show9()
+            {
+                if( document.getElementById("b9").value.length==0)
+                {
+                if(t%2==1)
+                {   responsiveVoice.speak("player two turn ");
+                    document.getElementById("b9").value="x";
+                }
+                else
+                {  responsiveVoice.speak("player one turn ");
+                    document.getElementById("b9").value="0";
+
+                }
+                t=t+1;
+                winner();
+            }
+            }
+
+
+        </script>
+        <script>
+                  function start()
+         {
+            document.getElementById("x").style.visibility='visible';
+            responsiveVoice.speak("start the game tic tac toe ");
+            
+            document.getElementById("start").style.visibility='hidden';
+             
+         }
+        </script>
+         
+          <body >
+            <input type="button" value="Start Game" class="a" id="start" onclick="start()">
+
+
+         
+            
+         <div id="x">
+            <span id="v1" class="a1"></span>
+            <h1 align="center" class="m" >Tic Tac Toe</h1><table border="1" cellpadding="10" align="center" class="b">
+          <tr>
+          <td>  <input type="button" class="z" id="b1" onclick="show1()"></td> 
+          <td>  <input type="button" class="z"id="b2" onclick="show2()"></td>
+          <td>  <input type="button" class="z" id="b3" onclick="show3()"></td>
+        </tr>
+        <tr>
+           <td> <input type="button" class="z" id="b4" onclick="show4()"></td>
+           <td><input type="button" class="z" id="b5" onclick="show5()"></td>
+            <td> <input type="button" class="z" id="b6" onclick="show6()"></td>
+        </tr> 
+        <tr>  
+        <td> <input type="button" class="z" id="b7" onclick="show7()"></td>
+            <td> <input type="button" class="z" id="b8" onclick="show8()"></td>
+           <td> <input type="button" class="z" id="b9" onclick="show9()"></td>
+        </tr>
+        </table>
+        <br><br><br><table border="1" align="center" class="b">
+        <th>player1</th><th>player2</th>
+        <tr>
+            
+            <td><p id="x1">0</p></td><td><p id="x2">0</p></td>
+         
+        </tr>
+        
+    </table>
+   
+    </div></head>
+        </body>
+
+
+        <script>
+            document.getElementById("x").style.visibility='hidden';
+        </script>
+
+</html>
